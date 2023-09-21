@@ -9,8 +9,8 @@ if __name__ == '__main__':
     with open('config.yaml', 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
 
-    tq = TqdataClient(config['tq']['username'], config['tq']
-                      ['password'], intervals=config['tq']['intervals'])
+    tq = TqdataClient(config['tqsdk']['username'], config['tqsdk']
+                      ['password'], intervals=config['tqsdk']['intervals'])
     email = HtmlEmail(config['email']['account'], config['email']['password'],
                       config['email']['smtp_host'], config['email']['smtp_port'])
     receivers = config['email']['receivers']
